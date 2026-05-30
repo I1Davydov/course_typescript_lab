@@ -3,7 +3,10 @@
 */
 
 export function calculate_discount(price, discount) {
-  return "Ошибка! Процент скидки слишком большой.";
+  if (discount > 100) {
+    return "Ошибка! Процент скидки слишком большой.";
+  }
+  return price * (1 - discount / 100);
 }
 
 
