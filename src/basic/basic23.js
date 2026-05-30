@@ -5,5 +5,15 @@
 */
 
 export function strip_special_chars(text) {
-	return "";
+  const allowed = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+  let result = '';
+  let i = 0;
+  while (i < text.length) {
+    const char = text[i];
+    if (allowed.includes(char)) {
+      result += char;
+    }
+    i++;
+  }
+  return result;
 }
