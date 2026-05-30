@@ -4,5 +4,5 @@
 */
 
 export function palindrome_check(word) {
-	return true;
+  return word === word.split('').reverse().join('');
 }
