@@ -3,7 +3,14 @@
 */
 
 export function some(arr, callback) {
-	return false;
+  let i = 0;
+  while (i < arr.length) {
+    if (callback(arr[i])) {
+      return true;
+    }
+    i++;
+  }
+  return false;
 }
 
 
