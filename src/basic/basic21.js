@@ -4,5 +4,17 @@
 */
 
 export function capitalize_words(sentence) {
-	return "";
+  const words = sentence.split(' ');
+  let i = 0;
+  const result = [];
+  while (i < words.length) {
+    const word = words[i];
+    if (word) {
+      result.push(word[0].toUpperCase() + word.slice(1));
+    } else {
+      result.push('');
+    }
+    i++;
+  }
+  return result.join(' ');
 }
