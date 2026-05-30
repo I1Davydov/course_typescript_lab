@@ -3,5 +3,13 @@
 */
 
 export function even_elements(arr) {
-    return [];
+  const result = [];
+  let i = 0;
+  while (i < arr.length) {
+    if (arr[i] % 2 === 0) {
+      result.push(arr[i]);
+    }
+    i++;
+  }
+  return result;
 }
