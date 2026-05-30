@@ -3,7 +3,21 @@
 */
 
 export function splitAndMergeStrings(strArr) {
-  return "";
+  const result = [];
+  let i = 0;
+  while (i < strArr.length) {
+    const s = strArr[i];
+    if (s.length === 1) {
+      result.push(s);
+    } else {
+      const firstLen = Math.ceil(s.length / 2);
+      const firstPart = s.slice(0, firstLen);
+      const secondPart = s.slice(firstLen);
+      result.push(firstPart, secondPart);
+    }
+    i++;
+  }
+  return result;
 }
 
 
