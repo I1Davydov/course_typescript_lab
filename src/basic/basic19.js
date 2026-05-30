@@ -3,7 +3,15 @@
 */
 
 export function sum_positive(arr) {
-	return 0;
+  let sum = 0;
+  let i = 0;
+  while (i < arr.length) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+    i++;
+  }
+  return sum;
 }
 
 
