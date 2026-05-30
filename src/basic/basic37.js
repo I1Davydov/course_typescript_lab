@@ -3,8 +3,13 @@
 */
 
 export function map(arr, f) {
-
-  return arr;
+  const result = [];
+  let i = 0;
+  while (i < arr.length) {
+    result.push(f(arr[i]));
+    i++;
+  }
+  return result;
 }
 
 
