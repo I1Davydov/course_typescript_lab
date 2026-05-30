@@ -3,7 +3,13 @@
 */
 
 export function all(arr, callback) {
-
-	return true;
+  let i = 0;
+  while (i < arr.length) {
+    if (!callback(arr[i])) {
+      return false;
+    }
+    i++;
+  }
+  return true;
 }
 
