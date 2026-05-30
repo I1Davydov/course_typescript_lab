@@ -3,6 +3,19 @@
 */
 
 export function second_largest(arr) {
-  return null;
+  let largest = null;
+  let secondLargest = null;
+  let i = 0;
+  while (i < arr.length) {
+    const num = arr[i];
+    if (largest === null || num > largest) {
+      secondLargest = largest;
+      largest = num;
+    } else if (num !== largest && (secondLargest === null || num > secondLargest)) {
+      secondLargest = num;
+    }
+    i++;
+  }
+  return secondLargest;
 }
 
