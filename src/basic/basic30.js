@@ -3,6 +3,15 @@
 */
 
 export function extractUniqueValues(arr1, arr2) {
-    return arr1;
+  const result = [...arr2];
+  let i = 0;
+  while (i < arr1.length) {
+    const elem = arr1[i];
+    if (arr2.indexOf(elem) === -1 && result.indexOf(elem) === -1) {
+      result.push(elem);
+    }
+    i++;
+  }
+  return result;
 }
 
