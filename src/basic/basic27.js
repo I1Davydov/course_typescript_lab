@@ -3,5 +3,5 @@
 */
 
 export function insertAtPosition(arr, pos, elem) {
-  return arr;
+  return arr.slice(0, pos).concat(elem, arr.slice(pos));
 }
