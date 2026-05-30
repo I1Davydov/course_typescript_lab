@@ -3,5 +3,11 @@
 */
 
 export function concatenate_strings(arr) {
-	return "";
+  let result = "";
+  let i = 0;
+  while (i < arr.length) {
+    result += arr[i];
+    i++;
+  }
+  return result;
 }
