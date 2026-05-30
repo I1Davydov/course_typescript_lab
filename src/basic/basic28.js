@@ -3,6 +3,13 @@
 */
 
 export function removeDuplicates(arr) {
-
-	return arr;
+  const result = [];
+  let i = 0;
+  while (i < arr.length) {
+    if (result.indexOf(arr[i]) === -1) {
+      result.push(arr[i]);
+    }
+    i++;
+  }
+  return result;
 }
