@@ -4,8 +4,15 @@
 */
 
 export function filter(arr, f) {
-
-	return arr;
+  const result = [];
+  let i = 0;
+  while (i < arr.length) {
+    if (f(arr[i])) {
+      result.push(arr[i]);
+    }
+    i++;
+  }
+  return result;
 }
 
 
