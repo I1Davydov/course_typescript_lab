@@ -4,8 +4,14 @@
 */
 
 export function find(arr, callback) {
-
-    return undefined;
+  let i = 0;
+  while (i < arr.length) {
+    if (callback(arr[i])) {
+      return arr[i];
+    }
+    i++;
+  }
+  return undefined;
 }
 
 
