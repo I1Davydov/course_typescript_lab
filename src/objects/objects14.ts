@@ -4,9 +4,9 @@
 
 export const objectWithInnerFunction = {
     value: 10,
-    getInnerFunction() {
-        return function() {
-            return this.value; 
-        };
-    }
+  getInnerFunction() {
+    return () => {
+      return this.value; 
+    };
+  }
 };
