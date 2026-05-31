@@ -14,6 +14,19 @@ export const user: User = {
   age: 30,
   role: ["admin", "user"],
   equal(other: User) {	
-	return true
+    if (this.name !== other.name || this.age !== other.age) {
+      return false;
+    }
+    if (this.role.length !== other.role.length) {
+      return false;
+    }
+    let i = 0;
+    while (i < this.role.length) {
+      if (this.role[i] !== other.role[i]) {
+        return false;
+      }
+      i++;
+    }
+    return true;
   },
 };
