@@ -10,6 +10,5 @@ const calculator = {
 };
 
 export function add(value: number) {
-	const adder = calculator.add;
-	return adder(value); 	
+	return calculator.add.call(calculator, value);
 }
