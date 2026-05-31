@@ -5,6 +5,9 @@
 export const product = {
     price: 100,
     withTaxRate(rate: number) {
-        return this;
+        return {
+            ...this,
+            taxAmount: this.price * rate
+        };
     }
 };
