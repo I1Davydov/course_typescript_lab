@@ -5,6 +5,12 @@
 export const user = {
     profile: { name: 'Alice', age: 30 },
     uppercaseProfileNames() {
-        return this;
+        return {
+            ...this,
+            profile: {
+                ...this.profile,
+                name: this.profile.name.toUpperCase()
+            }
+        };
     }
 };
