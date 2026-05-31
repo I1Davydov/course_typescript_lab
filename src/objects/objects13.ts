@@ -4,11 +4,11 @@
 */
 
 export const user = {
-    name: 'Алексей',
-    greeting() {
-        const externalFn = function() {
-            console.log(`Привет, меня зовут ${this.name}`);
-        };
-        externalFn();
-    }
-};
+     name: 'Алексей',
+     greeting() {
+         const externalFn = () => {
+             console.log(`Привет, меня зовут ${this.name}`);
+         };
+         externalFn();
+     }
+ };
