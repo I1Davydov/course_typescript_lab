@@ -31,6 +31,6 @@ export const user: User = {
   age: 30,
   address: address,
   equal(other: User) {
-	  return true;
+    return this.name === other.name && this.age === other.age && this.address.equal(other.address);
   },
 };
