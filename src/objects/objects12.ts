@@ -4,7 +4,7 @@
 
 const calculator = {
     previousValue: 0,
-    add: (value: number) => {
+    add(value: number) {
         return this.previousValue += value;
     }
 };
