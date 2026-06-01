@@ -12,7 +12,7 @@ export class Student {
 	this.last_name = last_name;
     Student.count++;
   }
-  static info(): string {
-    return `Всего ${Student.count} студентов`;
-  }
+   static get info(): string {
+     return `Всего ${Student.count} студентов`;
+   }
 }
