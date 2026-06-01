@@ -20,7 +20,7 @@ export class Collection<T extends { equals(other: T): boolean }> {
     return this.items.some((i) => i.equals(item));
   }
 
-  count(item: T): number {
-    
-  }
+   count(item: T): number {
+     return this.items.filter((i) => i.equals(item)).length;
+   }
 }
