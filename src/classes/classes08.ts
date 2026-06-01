@@ -3,22 +3,22 @@
 */
 
 export class Animal {
-  
-  name: string;
-  species: string;
-  constructor(name: string, species: string) {
-    this.name = name;
-    this.species = species;
-    
-  }
-  greet() {
-    console.log(
-      `Привет, меня зовут ${this.name}! Я представитель вида ${this.species}.`
-    );
-  }
-  static getAnimalCount() {
-    
-  }
+    static animalCount = 0;
+   name: string;
+   species: string;
+   constructor(name: string, species: string) {
+     this.name = name;
+     this.species = species;
+     Animal.animalCount++;
+   }
+   greet() {
+     console.log(
+       `Привет, меня зовут ${this.name}! Я представитель вида ${this.species}.`
+     );
+   }
+   static getAnimalCount() {
+     return Animal.animalCount;
+   }
 }
 
 
