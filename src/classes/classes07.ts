@@ -12,7 +12,7 @@ export class Logger {
     }
 
     public static logMessage(message: string): string {
-
+        return `[${Logger.logLevel}] ${message}`;
     }
 }
 
