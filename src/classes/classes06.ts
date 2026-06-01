@@ -8,6 +8,6 @@ export class Counter {
         Counter.count++;
     }
     static getCurrentCount() {
-
+        return Counter.count;
     }
 }
