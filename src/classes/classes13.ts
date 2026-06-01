@@ -18,10 +18,10 @@ export class Lesson {
     this.number = number;
   }
 
-  set number(n: number) {
-
-  }
-  get number(): number {
-
-  }
+   set number(n: number) {
+     this._number = (n >= 1 && n <= 7) ? n : 0;
+   }
+   get number(): number {
+     return this._number;
+   }
 }
