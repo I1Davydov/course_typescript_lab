@@ -4,7 +4,11 @@
 
 export function Timestamped<TBase extends new (...args: any[]) => any>(Base: TBase) {
   return class extends Base {
-
+    timestamp: Date = new Date();
+    
+    getTimestamp(): string {
+      return this.timestamp.toISOString();
+    }
   };
 }
 
