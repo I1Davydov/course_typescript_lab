@@ -6,7 +6,9 @@
 
 export function Loggable<TBase extends new (...args: any[]) => any>(Base: TBase) {
   return class extends Base {
-
+    log(message: string): void {
+      console.log(`[LOG]: ${message}`);
+    }
   };
 }
 
