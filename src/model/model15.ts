@@ -12,7 +12,7 @@ export class Account {
 
 export class PremiumAccount extends Account {
   override withdraw(amount: number): void {
-    
+    if (amount <= 0) throw new Error("Amount must be positive");
     console.log(`Premium withdrawal: ${amount}`);
   }
 }
