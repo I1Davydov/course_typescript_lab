@@ -14,4 +14,8 @@ export class Animal {
   }
 }
 
-export class Dog 
+export class Dog extends Animal {
+    bark(): void {
+        console.log("Woof!");
+    }
+}
