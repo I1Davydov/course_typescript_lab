@@ -10,5 +10,7 @@ export class Database {
 }
 
 export class UserDatabase extends Database {
-
+  override save(data: any): void {
+    console.log("Saving any data");
+  }
 }
