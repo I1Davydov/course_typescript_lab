@@ -13,5 +13,9 @@ export class Person {
 
 
 export class Employee extends Person {
-  
+    position: string;
+    constructor(name: string, position: string) {
+        super(name);
+        this.position = position;
+    }
 }
