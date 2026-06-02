@@ -23,4 +23,4 @@ export class FormData {
   fields: any = {};
 }
 
-export const EnhancedFormData 
+export const EnhancedFormData = Validatable(Serializable(FormData));
