@@ -10,5 +10,8 @@ export class Shape {
 
 
 export class Circle extends Shape {
-
+  override draw(): void {
+    super.draw();
+    console.log("Drawing circle");
+  }
 }
