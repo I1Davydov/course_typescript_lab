@@ -6,6 +6,5 @@ import { Result, err, ok } from 'neverthrow'
 
 export const parseNumber = (input: string): Result<number, string> => {
 	const num = Number(input)
-	// Ваш код здесь (3-5 строк)
-
+	return Number.isNaN(num) ? err("Invalid number") : ok(num)
 }
