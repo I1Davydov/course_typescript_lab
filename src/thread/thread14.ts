@@ -3,9 +3,15 @@
 */
 
 import { fetchUser, fetchUserPosts, type Post } from "./promises";
-import type { User } from "./thread07";
+import type { User } from "./promises";
 
 export function getUserPostsWithAuthor(userId: number): Promise<Array<Post & { author: User }>> {
-	// TODO: Реализовать цепочку промисов
-
+  return fetchUserPosts(userId).then(async (posts) => {
+    const postsWithAuthor = [];
+    for (const post of posts) {
+      const author = await fetchUser(post.userId);
+      postsWithAuthor.push({ ...post, author });
+    }
+    return postsWithAuthor;
+  });
 }
