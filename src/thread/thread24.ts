@@ -12,8 +12,7 @@ const alternativeParser = (input: string): Result<number, string> => {
 
 
 export const tryParseNumber = (input: string): Result<number, string> => {
-	return parseNumber(input)
-	// Ваш код здесь 
+	return parseNumber(input).orElse(() => alternativeParser(input));
 }
 
 
