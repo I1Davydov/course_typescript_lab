@@ -3,8 +3,9 @@
 */
 
 export function createValidDate(dateString: string): Date {
-  // Ваш код здесь (3-4 строки)
   const date = new Date(dateString);
-  // Проверить на Invalid Date
+  if (isNaN(date.getTime())) {
+    throw new Error('Invalid date format');
+  }
   return date;
 }
