@@ -4,7 +4,8 @@
 
 import { fetchUser, fetchUserData, type User } from "./promises";
 
-export function getUserWithData(id: number): Promise<{ user: User; data: User }> {
-  // TODO: Реализовать последовательное получение пользователя и его данных
-
+export async function getUserWithData(id: number): Promise<{ user: User; data: User }> {
+  const user = await fetchUser(id);
+  const data = await fetchUserData(id);
+  return { user, data };
 }
