@@ -5,5 +5,5 @@
 import { fetchUserSettings } from "./promises";
 
 export function getSafeUserSettings(id: number): Promise<{ theme: string }> {
-  // TODO: Добавить обработку ошибок с возвратом значений по умолчанию
+  return fetchUserSettings(id).catch(() => ({ theme: 'light' }));
 }
