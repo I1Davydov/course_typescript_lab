@@ -3,9 +3,11 @@
 */
 
 export class UserValidationError extends Error {
-  constructor(message: string, public field?: string) {
+  field?: string;
+  constructor(message: string, field?: string) {
     super(message);
     this.name = 'UserValidationError';
+    this.field = field;
   }
 }
 
@@ -16,9 +18,18 @@ export interface User {
 }
 
 export function validateUser(user: User): void {
-  // Ваш код здесь (8-10 строк)
   // 1. Проверить, что имя не пустое
+  if (!user.name || user.name.trim() === '') {
+    throw new UserValidationError('Name is required', 'name');
+  }
+  
   // 2. Проверить, что возраст >= 18
+  if (user.age < 18) {
+    throw new UserValidationError('Age must be at least 18', 'age');
+  }
+  
   // 3. Проверить, что email содержит '@'
-  // Для каждой ошибки бросать UserValidationError с указанием поля
+  if (!user.email || !user.email.includes('@')) {
+    throw new UserValidationError('Invalid email format', 'email');
+  }
 }
